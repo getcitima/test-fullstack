@@ -6,18 +6,18 @@ const assert = require("assert")
 // connection URL
 const url = "mongodb://"+process.env.DB_USER+":"+process.env.DB_PASS+"@"+process.env.DB_HOST+":"+process.env.DB_PORT+"/"+process.env.DB_NAME
 
-// client
-const client = new MongoClient(url, {
-  ssl: true,
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  tlsAllowInvalidCertificates: true
-})
-
 // documentation
 // https://docs.mongodb.com/drivers/node/current/usage-examples/
 
 async function findMultipleDocs() {
+
+  // client
+  const client = new MongoClient(url, {
+    ssl: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    tlsAllowInvalidCertificates: true
+  })
 
   try {
 
@@ -50,6 +50,14 @@ async function findMultipleDocs() {
 
 async function insertOneDoc() {
 
+  // client
+  const client = new MongoClient(url, {
+    ssl: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    tlsAllowInvalidCertificates: true
+  })
+
   try {
 
     await client.connect()
@@ -73,6 +81,14 @@ async function insertOneDoc() {
 }
 
 async function updateOneDoc(_id) {
+
+  // client
+  const client = new MongoClient(url, {
+    ssl: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    tlsAllowInvalidCertificates: true
+  })
 
   try {
 
